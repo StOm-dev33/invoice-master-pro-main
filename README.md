@@ -1,4 +1,4 @@
-# Invoice Master Pro
+# Invoice Management App
 
 A fully responsive Invoice Management Application built with React, TypeScript, and Tailwind CSS.
 

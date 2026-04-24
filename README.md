@@ -4,11 +4,11 @@ A fully responsive Invoice Management Application built with React, TypeScript, 
 
 ## Live Demo
 
-[View Live App](https://your-deployment-url.vercel.app) <!-- Replace with your Vercel/Netlify URL -->
+[View Live App]( https://stom-dev33.github.io/invoice-master-pro-main/) <!-- Replace with your Vercel/Netlify URL -->
 
 ## GitHub Repository
 
-(https://github.com/zion-robotics/invoice-master-pro)
+(https://github.com/StOm-dev33/invoice-master-pro-main)
 
 ---
 

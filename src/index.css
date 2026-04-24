@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Invoice app design system. All colors HSL. */
+@layer base {
+  :root {
+    --background: 240 27% 98%;          /* #F8F8FB */
+    --foreground: 231 28% 7%;           /* #0C0E16 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 231 28% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 231 28% 7%;
+
+    --primary: 252 94% 67%;             /* #7C5DFA */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 252 100% 73%;      /* #9277FF */
+
+    --secondary: 231 67% 99%;           /* near white-blue */
+    --secondary-foreground: 231 36% 26%;
+
+    --muted: 231 73% 93%;               /* #DFE3FA */
+    --muted-foreground: 231 20% 61%;    /* #888EB0 */
+
+    --accent: 231 67% 96%;
+    --accent-foreground: 231 36% 26%;
+
+    --destructive: 0 80% 63%;           /* #EC5757 */
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 100% 79%;    /* #FF9797 */
+
+    --border: 231 73% 93%;
+    --input: 231 36% 84%;
+    --ring: 252 94% 67%;
+
+    --radius: 0.5rem;
+
+    /* Status */
+    --status-paid: 160 67% 52%;         /* #33D69F */
+    --status-pending: 33 100% 50%;      /* #FF8F00 */
+    --status-draft: 231 20% 27%;        /* #373B53 */
+
+    /* Sidebar */
+    --sidebar-bg: 231 28% 7%;           /* #1E2139-ish base, but main sidebar uses dark navy */
+    --sidebar-foreground: 0 0% 100%;
+
+    --surface-detail: 231 36% 26%;      /* #252946 */
+    --navy: 231 36% 18%;                /* #1E2139 */
+    --text-secondary: 231 36% 63%;      /* #7E88C3 */
+  }
+
+  .dark {
+    --background: 233 31% 12%;          /* #141625 */
+    --foreground: 0 0% 100%;
+
+    --card: 231 36% 18%;                /* #1E2139 */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 231 36% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 252 94% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 252 100% 73%;
+
+    --secondary: 231 36% 26%;           /* #252946 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 231 36% 26%;
+    --muted-foreground: 231 36% 84%;    /* #DFE3FA */
+
+    --accent: 231 36% 26%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 80% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-hover: 0 100% 79%;
+
+    --border: 231 36% 26%;
+    --input: 231 36% 26%;
+    --ring: 252 94% 67%;
+
+    --status-paid: 160 67% 52%;
+    --status-pending: 33 100% 50%;
+    --status-draft: 231 36% 84%;
+
+    --surface-detail: 231 36% 26%;
+    --navy: 231 36% 18%;
+    --text-secondary: 231 36% 63%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'League Spartan', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .status-paid { color: hsl(var(--status-paid)); background-color: hsl(var(--status-paid) / 0.1); }
+  .status-pending { color: hsl(var(--status-pending)); background-color: hsl(var(--status-pending) / 0.1); }
+  .status-draft { color: hsl(var(--status-draft)); background-color: hsl(var(--status-draft) / 0.1); }
+  .dark .status-draft { color: hsl(var(--status-draft)); background-color: hsl(var(--status-draft) / 0.06); }
+}

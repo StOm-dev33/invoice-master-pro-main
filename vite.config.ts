@@ -3,8 +3,10 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
+// ... (imports remain the same)
+
 export default defineConfig(({ mode }) => ({
+  base: "/invoice-master-pro-main/", // <-- Add this line
   server: {
     host: "::",
     port: 8080,

@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { Link, useLocation } from "react-router-dom";
-import profilePic from "@/assets/zion complete prof pics.png";
+import profilePic from "@/assets/nicol.jpg";
 
 export function Sidebar() {
   const { theme, toggle } = useTheme();
